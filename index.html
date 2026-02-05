@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Internet Traffic & Latency Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">RT Traffic Monitor</div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#simulation">Simulation</a>
+          <a href="#roadmap">Roadmap</a>
+        </div>
+        <button class="cta">Request Demo</button>
+      </nav>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Production-Grade Networking Observatory</p>
+          <h1>Real-Time Internet Traffic & Latency Monitor</h1>
+          <p class="subtitle">
+            Visualize global latency, packet loss, jitter, and CDN routing paths with a live,
+            interactive dashboard powered by WebSockets and synthetic traffic models.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">Launch Dashboard</button>
+            <button class="secondary">View Architecture</button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <span class="stat">170+</span>
+              <span class="label">Regions monitored</span>
+            </div>
+            <div>
+              <span class="stat">250 ms</span>
+              <span class="label">p95 latency insights</span>
+            </div>
+            <div>
+              <span class="stat">2.5s</span>
+              <span class="label">Streaming refresh</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="map">
+            <div class="pulse pulse-a"></div>
+            <div class="pulse pulse-b"></div>
+            <div class="pulse pulse-c"></div>
+            <div class="beam beam-a"></div>
+            <div class="beam beam-b"></div>
+            <div class="beam beam-c"></div>
+            <div class="map-overlay">
+              <h3>Live Global Heatmap</h3>
+              <p>Latency intensity updates in real time across regions.</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div>
+              <span class="metric-label">Packet loss</span>
+              <span class="metric-value">0.7%</span>
+            </div>
+            <div>
+              <span class="metric-label">Jitter</span>
+              <span class="metric-value">3.1 ms</span>
+            </div>
+            <div>
+              <span class="metric-label">Active routes</span>
+              <span class="metric-value">412</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="section">
+        <h2>Core Features</h2>
+        <p class="section-lead">
+          Built to mirror large-scale internet infrastructure, with streaming insights and
+          infrastructure-grade visualizations.
+        </p>
+        <div class="feature-grid">
+          <article>
+            <h3>Global Latency Heatmap</h3>
+            <p>Color-coded world map with animated pulses and hover stats.</p>
+            <ul>
+              <li>Region-level p50/p95 latency</li>
+              <li>Packet loss overlays</li>
+              <li>Traffic intensity animation</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Packet Loss & Jitter Streams</h3>
+            <p>Time-series charts that highlight anomalies and explain root causes.</p>
+            <ul>
+              <li>Spike detection and annotations</li>
+              <li>Region comparison controls</li>
+              <li>Congestion-aware tooltips</li>
+            </ul>
+          </article>
+          <article>
+            <h3>CDN Routing Visualization</h3>
+            <p>Animate origin → edge → user routing paths for real-time insights.</p>
+            <ul>
+              <li>User/edge/origin selectors</li>
+              <li>Failover path simulation</li>
+              <li>Latency replay timeline</li>
+            </ul>
+          </article>
+          <article>
+            <h3>WebSocket Live Updates</h3>
+            <p>Streaming engine pushes updates to keep the UI responsive and fresh.</p>
+            <ul>
+              <li>2.5s median refresh</li>
+              <li>No polling overhead</li>
+              <li>Server-side throttling</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="architecture" class="section alt">
+        <h2>System Architecture</h2>
+        <div class="architecture">
+          <div class="layer">
+            <h3>Client (Web App)</h3>
+            <p>React + D3 / Mapbox, real-time dashboard, WebSocket client.</p>
+          </div>
+          <div class="layer">
+            <h3>Real-Time Data Engine (BFF)</h3>
+            <p>Node.js + TypeScript, latency simulator, packet loss generator.</p>
+          </div>
+          <div class="layer">
+            <h3>Data Sources (v1 → v2)</h3>
+            <p>Synthetic models today, public probes and cloud APIs tomorrow.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="simulation" class="section">
+        <h2>Simulation Logic (v1)</h2>
+        <div class="simulation">
+          <div>
+            <p>
+              Synthetic data uses realistic network modeling so you can control scenarios and
+              confidently demo system behavior.
+            </p>
+            <ul>
+              <li><code>latency = baseDistanceLatency + congestionFactor + randomJitter</code></li>
+              <li><code>packetLoss = congestion &gt; threshold ? random(1–5%) : &lt;1%</code></li>
+              <li><code>jitter = variance(latency over 60s)</code></li>
+            </ul>
+          </div>
+          <div class="callout">
+            <h3>Interview Talking Points</h3>
+            <ul>
+              <li>“We use WebSockets to avoid polling overhead.”</li>
+              <li>“Latency models combine distance + congestion.”</li>
+              <li>“Visualization highlights p95, not just averages.”</li>
+              <li>“System is extensible to real probes later.”</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section alt">
+        <h2>Roadmap</h2>
+        <div class="roadmap">
+          <div class="roadmap-item">
+            <span>01</span>
+            <div>
+              <h3>Front-end Scaffold</h3>
+              <p>Next.js + TypeScript foundation with layout, routing, and design system.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <span>02</span>
+            <div>
+              <h3>Streaming Data Engine</h3>
+              <p>WebSocket server with synthetic latency, jitter, packet loss models.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <span>03</span>
+            <div>
+              <h3>Map + Routing Visualizations</h3>
+              <p>Global heatmap, animated routing paths, and playback controls.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <span>04</span>
+            <div>
+              <h3>Alerts & Comparisons</h3>
+              <p>Threshold notifications, region comparisons, and dark mode ops view.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h3>Real-Time Internet Traffic & Latency Monitor</h3>
+        <p>Modeling internet infrastructure with real-time visualization.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#simulation">Simulation</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+      <button class="cta ghost">Get Updates</button>
+    </footer>
+  </body>
+</html>
