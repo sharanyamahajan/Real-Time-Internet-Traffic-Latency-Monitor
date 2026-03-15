@@ -10,7 +10,7 @@ A production-grade, real-time dashboard that visualizes how internet traffic flo
 - **WebSocket-based live updates** to avoid polling overhead and keep the UI responsive.
 
 ## System Architecture (High Level)
-```
+``` 
 ┌────────────────────────────────────────────────────────┐
 │                    CLIENT (Web App)                    │
 │                                                        │
