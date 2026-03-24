@@ -8,7 +8,7 @@ A production-grade, real-time dashboard that visualizes how internet traffic flo
 - **Real-time packet loss & jitter charts** with automatic spike detection and tooltips.
 - **CDN routing visualization** showing origin → edge → user paths with map animations.
 - **WebSocket-based live updates** to avoid polling overhead and keep the UI responsive.
-
+  
 ## System Architecture (High Level)
 ``` 
 ┌────────────────────────────────────────────────────────┐
